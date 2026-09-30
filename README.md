@@ -36,14 +36,22 @@ Typische Schwäche von Jev: Fehlersuche („finde heraus, warum…") stuft es ö
 ## Installation
 
 ```bash
-mkdir -p ~/.claude/modbuddy/data ~/.claude/skills/modbuddy
-cp modbuddy/route.sh modbuddy/modbuddy.sh modbuddy/config.json ~/.claude/modbuddy/
-chmod +x ~/.claude/modbuddy/*.sh
-cp modbuddy/data/eval.jsonl ~/.claude/modbuddy/data/
-cp skills/modbuddy/SKILL.md ~/.claude/skills/modbuddy/
+curl -fsSL https://raw.githubusercontent.com/amoerke/modbuddy/main/install.sh | bash
 ```
 
-Den Key selbst in `~/.claude/modbuddy/.env` eintragen, als Zeile `TYPESAFE_API_KEY=...`, und die Datei mit `chmod 600` schützen. Alternativ die Umgebungsvariable `TYPESAFE_API_KEY` setzen. Dann den Block aus `hook-settings.json` in `~/.claude/settings.json` unter `hooks.UserPromptSubmit` **ergänzen** und Claude Code neu starten.
+Optionen hängst du mit `bash -s --` an, z. B. `… | bash -s -- --on`. Aus einem geklonten Repo geht es auch direkt mit `./install.sh`.
+
+Der Installer prüft `curl` und `jq` (fehlt jq, bietet er auf dem Mac `brew install jq` an), kopiert Hook, CLI und Skill nach `~/.claude`, trägt den Hook in `~/.claude/settings.json` ein und fragt nach dem API-Key. Der Key landet in `~/.claude/modbuddy/.env` mit `chmod 600`. Vorhandene Hooks bleiben erhalten, die vorige Version liegt als `settings.json.bak-modbuddy` daneben. Danach Claude Code neu starten und `/modbuddy on` eingeben.
+
+| Aufruf | Wirkung |
+|--------|---------|
+| `./install.sh` | installieren oder aktualisieren. Eine angepasste `config.json` bleibt erhalten, die neue Vorlage liegt als `config.default.json` daneben. |
+| `./install.sh --key <key>` | Key ohne Rückfrage setzen |
+| `./install.sh --session-model sonnet` | für Teammitglieder, deren Session nicht auf Opus läuft |
+| `./install.sh --on` | Router gleich einschalten |
+| `./install.sh --uninstall` | Hook, Skill und Skripte entfernen. Vor dem Löschen von Key, Config und Log fragt der Installer nach. |
+
+Manuell geht es auch: die Dateien wie in `install.sh` nach `~/.claude/modbuddy` und `~/.claude/skills/modbuddy` kopieren und den Block aus `hook-settings.json` in `~/.claude/settings.json` unter `hooks.UserPromptSubmit` ergänzen.
 
 ## Benutzen
 
@@ -84,4 +92,5 @@ modbuddy/config.json        Schwellen, Session-Modell, Jev-Fragen und -Kriterien
 modbuddy/data/eval.jsonl    48 gelabelte Test-Prompts für /modbuddy eval
 skills/modbuddy/SKILL.md    der Skill /modbuddy
 hook-settings.json          der Block für ~/.claude/settings.json
+install.sh                  Installer: installieren, aktualisieren, --uninstall
 ```
