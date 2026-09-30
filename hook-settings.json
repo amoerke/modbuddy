@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -x \"$HOME/.claude/modbuddy/route.sh\" ] && bash \"$HOME/.claude/modbuddy/route.sh\" || true",
+            "timeout": 8,
+            "statusMessage": "modbuddy: choosing model tier..."
+          }
+        ]
+      }
+    ]
+  }
+}

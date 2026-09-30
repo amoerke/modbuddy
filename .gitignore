@@ -1,0 +1,5 @@
+# never commit these: your API key, your prompt log, the on/off toggle
+.env
+modbuddy/log.jsonl
+modbuddy/enabled
+.DS_Store

@@ -1,0 +1,27 @@
+{
+  "api_url": "https://api.typesafe.ai/v1/systemone",
+  "model": "jev-latest",
+  "timeout_seconds": 5,
+  "max_state_chars": 12000,
+  "min_prompt_chars": 12,
+  "log_prompt_chars": 120,
+  "session_model": "opus",
+  "min_confidence": 0.9,
+  "context_threshold": 0.5,
+  "questions": {
+    "route": {
+      "type": "choice",
+      "instructions": "Which Claude model tier is the cheapest one that can complete this coding-agent request well? A subagent starts with a fresh context and reads the files it needs from the repo.",
+      "criteria": {
+        "haiku": "Trivial: find a file or symbol, grep, read and report, list things, a one-line or one-file edit with no design decision, a simple factual question",
+        "sonnet": "Standard implementation: a well-specified feature or fix in a few files, writing or fixing tests, routine refactor, following an existing task list step by step",
+        "opus": "Hard: multi-file refactor with trade-offs, subtle debugging, performance work, architecture or data-model design, reviewing code for correctness",
+        "fable": "Highest stakes or open-ended: security/auth/payment/RLS changes, ambiguous product decisions that need discussion, deep reasoning across the whole codebase, anything asking for judgment or advice rather than execution"
+      }
+    },
+    "needs_context": {
+      "type": "noul",
+      "instructions": "Does completing this request depend on the earlier conversation (it refers to something said before: \"that\", \"above\", \"what we discussed\", \"the same\", \"continue\", \"your change\", or replies to a question) rather than being self-contained? References to this project, this repo or this codebase do NOT count: a subagent can read the repository itself."
+    }
+  }
+}
