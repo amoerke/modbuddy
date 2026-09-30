@@ -1,0 +1,48 @@
+{"prompt": "Wo liegt die Konfiguration für Tailwind?", "tier": "haiku", "context": false}
+{"prompt": "Welche Funktion berechnet die Versandkosten?", "tier": "haiku", "context": false}
+{"prompt": "Lösche die leere Datei src/old/unused.ts", "tier": "haiku", "context": false}
+{"prompt": "Ändere den Text des Buttons auf der Startseite zu Jetzt starten", "tier": "haiku", "context": false}
+{"prompt": "Welche Routen hat die App?", "tier": "haiku", "context": false}
+{"prompt": "Liste alle Komponenten auf, die useEffect verwenden", "tier": "haiku", "context": false}
+{"prompt": "Which files were changed in the last commit?", "tier": "haiku", "context": false}
+{"prompt": "What port does the backend run on?", "tier": "haiku", "context": false}
+{"prompt": "Rename the CSS class .btn-primary to .button-primary in Button.module.css", "tier": "haiku", "context": false}
+{"prompt": "Where do we define the color palette?", "tier": "haiku", "context": false}
+{"prompt": "Füge eine Filterfunktion nach Status zur Aufgabenliste hinzu", "tier": "sonnet", "context": false}
+{"prompt": "Schreib Tests für den OrderController", "tier": "sonnet", "context": false}
+{"prompt": "Implementiere einen Export der Rechnungen als PDF mit der vorhandenen PDF-Bibliothek", "tier": "sonnet", "context": false}
+{"prompt": "Baue ein Formular zum Bearbeiten des Nutzerprofils mit Validierung", "tier": "sonnet", "context": false}
+{"prompt": "Add a dark/light theme switch to the navbar", "tier": "sonnet", "context": false}
+{"prompt": "Create a cron job that deletes temp files older than 7 days", "tier": "sonnet", "context": false}
+{"prompt": "Add an archived flag to projects with a migration and hide archived ones in the list", "tier": "sonnet", "context": false}
+{"prompt": "Convert the settings page to use the new design system components", "tier": "sonnet", "context": false}
+{"prompt": "Add unit tests for the date utility functions", "tier": "sonnet", "context": false}
+{"prompt": "Die Anwendung stürzt sporadisch mit too many open files ab, finde die Ursache", "tier": "opus", "context": false}
+{"prompt": "Entwirf ein Schema für Produktvarianten mit Attributen, Preisen und Lagerbeständen", "tier": "opus", "context": false}
+{"prompt": "Der Scroll ruckelt in der Chat-Ansicht bei langen Verläufen, optimiere das", "tier": "opus", "context": false}
+{"prompt": "Reviewe den Sync-Service auf Race Conditions", "tier": "opus", "context": false}
+{"prompt": "Why does our API return 502 errors under load?", "tier": "opus", "context": false}
+{"prompt": "Refactor the data layer to support both Postgres and SQLite", "tier": "opus", "context": false}
+{"prompt": "Design a plugin system for our editor", "tier": "opus", "context": false}
+{"prompt": "The nightly export job takes 4 hours, speed it up", "tier": "opus", "context": false}
+{"prompt": "Migrate the app from Webpack to Vite without breaking the build for all environments", "tier": "opus", "context": false}
+{"prompt": "Prüfe, ob unsere Passwort-Speicherung sicher ist", "tier": "fable", "context": false}
+{"prompt": "Implementiere Abonnements mit Stripe inklusive Upgrade, Downgrade und Kündigung", "tier": "fable", "context": false}
+{"prompt": "Sollen wir Kunden eine Freemium-Version anbieten?", "tier": "fable", "context": false}
+{"prompt": "Stelle sicher, dass Nutzer keine fremden Projekte über die API bearbeiten können", "tier": "fable", "context": false}
+{"prompt": "Welche Risiken hat es, wenn wir die Admin-Oberfläche öffentlich erreichbar machen?", "tier": "fable", "context": false}
+{"prompt": "Entwirf die Mandantentrennung für unsere Datenbank", "tier": "fable", "context": false}
+{"prompt": "Review our CORS and CSP configuration for security issues", "tier": "fable", "context": false}
+{"prompt": "How should we store API tokens of our customers' third-party integrations?", "tier": "fable", "context": false}
+{"prompt": "What's your advice on whether we should open-source parts of our product?", "tier": "fable", "context": false}
+{"prompt": "Implement the invoice payment reconciliation with our bank export", "tier": "fable", "context": false}
+{"prompt": "Und wo wird die Konstante noch benutzt?", "tier": "haiku", "context": true}
+{"prompt": "Öffne die Datei von vorhin nochmal", "tier": "haiku", "context": true}
+{"prompt": "Bitte jetzt noch für die Mobile-Ansicht anpassen", "tier": "sonnet", "context": true}
+{"prompt": "Go ahead and implement option 2", "tier": "sonnet", "context": true}
+{"prompt": "Mach dasselbe für die restlichen Seiten", "tier": "sonnet", "context": true}
+{"prompt": "Der Fix hat nicht geholfen, der Fehler kommt immer noch sporadisch", "tier": "opus", "context": true}
+{"prompt": "Your last change broke the other tests, figure out what's going on", "tier": "opus", "context": true}
+{"prompt": "Warum ist das so langsam?", "tier": "opus", "context": true}
+{"prompt": "Ist diese Lösung aus Datenschutzsicht in Ordnung?", "tier": "fable", "context": true}
+{"prompt": "Which option would you pick and why?", "tier": "fable", "context": true}
